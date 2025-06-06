@@ -6,6 +6,7 @@ import ApperIcon from '../ApperIcon'
 import PageHeader from '@/components/organisms/PageHeader'
 import MobileNavigation from '@/components/organisms/MobileNavigation'
 import AccountCreationModal from '@/components/organisms/AccountCreationModal'
+import TransactionCreationModal from '@/components/organisms/TransactionCreationModal'
 import DashboardPage from '@/components/pages/DashboardPage'
 import AccountsPage from '@/components/pages/AccountsPage'
 import BudgetPage from '@/components/pages/BudgetPage'
@@ -24,8 +25,9 @@ const HomePage = () => {
         const [investments, setInvestments] = useState([])
         const [goals, setGoals] = useState([])
         const [loading, setLoading] = useState(true)
-        const [activeTab, setActiveTab] = useState('dashboard')
+const [activeTab, setActiveTab] = useState('dashboard')
         const [showAccountModal, setShowAccountModal] = useState(false)
+        const [showTransactionModal, setShowTransactionModal] = useState(false)
         useEffect(() => {
           document.documentElement.classList.toggle('dark', darkMode)
         }, [darkMode])
@@ -89,6 +91,17 @@ const HomePage = () => {
             toast.success('Account created successfully!')
           } catch (error) {
             toast.error('Failed to create account')
+            throw error
+          }
+}
+
+        const handleCreateTransaction = async (transactionData) => {
+          try {
+            const newTransaction = await transactionService.create(transactionData)
+            setTransactions(prev => [...prev, newTransaction])
+            toast.success('Transaction added successfully!')
+          } catch (error) {
+            toast.error('Failed to add transaction')
             throw error
           }
         }
@@ -161,17 +174,17 @@ const HomePage = () => {
                           investments={investments}
                           goals={goals}
                           onAccountUpdate={setAccounts}
-                          onTransactionUpdate={setTransactions}
-                          onBudgetUpdate={setBudgets}
+onBudgetUpdate={setBudgets}
                           onInvestmentUpdate={setInvestments}
                           onGoalUpdate={setGoals}
                           calculateMonthlyIncome={calculateMonthlyIncome}
                           calculateMonthlyExpenses={calculateMonthlyExpenses}
                           formatCurrency={formatCurrency}
+                          onAddTransaction={() => setShowTransactionModal(true)}
                         />
                       )}
 
-{activeTab === 'accounts' && (
+                      {activeTab === 'accounts' && (
                         <AccountsPage 
                           accounts={accounts} 
                           formatCurrency={formatCurrency}
@@ -194,18 +207,24 @@ const HomePage = () => {
                   </AnimatePresence>
                 </div>
               </div>
-            </div>
+</div>
 
-<MobileNavigation
+            <MobileNavigation
               menuItems={menuItems}
               activeTab={activeTab}
               setActiveTab={setActiveTab}
             />
 
-            <AccountCreationModal
+<AccountCreationModal
               isOpen={showAccountModal}
               onClose={() => setShowAccountModal(false)}
               onCreateAccount={handleCreateAccount}
+            />
+
+            <TransactionCreationModal
+              isOpen={showTransactionModal}
+              onClose={() => setShowTransactionModal(false)}
+              onCreateTransaction={handleCreateTransaction}
             />
 
             <ToastContainer

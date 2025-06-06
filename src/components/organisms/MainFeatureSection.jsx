@@ -7,8 +7,7 @@ import React, { useState } from 'react'
       import ChartContainer from '@/components/molecules/ChartContainer'
       import GoalCreationModal from '@/components/organisms/GoalCreationModal'
       import * as goalService from '@/services/api/goalService'
-
-      const MainFeatureSection = ({ transactions, investments, onGoalUpdate }) => {
+const MainFeatureSection = ({ transactions, investments, onGoalUpdate, onAddTransaction }) => {
         const [activeChart, setActiveChart] = useState('spending')
         const [showGoalModal, setShowGoalModal] = useState(false)
         const [newGoal, setNewGoal] = useState({
@@ -167,13 +166,12 @@ import React, { useState } from 'react'
           trends: getTrendsData()
         }
 
-        const quickActions = [
-          { name: 'Add Account', icon: 'CreditCard', color: 'text-primary' },
-          { name: 'Add Transaction', icon: 'Receipt', color: 'text-secondary' },
-          { name: 'Set Budget', icon: 'Settings', color: 'text-accent' },
-          { name: 'Generate Report', icon: 'FileText', color: 'text-purple-500' },
+const quickActions = [
+          { name: 'Add Account', icon: 'CreditCard', color: 'text-primary', action: null },
+          { name: 'Add Transaction', icon: 'Receipt', color: 'text-secondary', action: onAddTransaction },
+          { name: 'Set Budget', icon: 'Settings', color: 'text-accent', action: null },
+          { name: 'Generate Report', icon: 'FileText', color: 'text-purple-500', action: null },
         ]
-
         return (
           <div className="space-y-6">
             {/* Chart Controls */}
@@ -223,12 +221,13 @@ import React, { useState } from 'react'
             />
 
             {/* Quick Actions */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {quickActions.map((action, index) => (
                 <motion.button
                   key={index}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
+                  onClick={action.action}
                   className="glassmorphism rounded-xl p-4 text-center hover:shadow-lg transition-all"
                 >
                   <ApperIcon name={action.icon} className={`mx-auto mb-2 ${action.color}`} size={24} />
