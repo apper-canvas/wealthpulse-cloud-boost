@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import ApperIcon from '../ApperIcon'
 import PageHeader from '@/components/organisms/PageHeader'
 import MobileNavigation from '@/components/organisms/MobileNavigation'
+import AccountCreationModal from '@/components/organisms/AccountCreationModal'
 import DashboardPage from '@/components/pages/DashboardPage'
 import AccountsPage from '@/components/pages/AccountsPage'
 import BudgetPage from '@/components/pages/BudgetPage'
@@ -13,8 +16,7 @@ import * as transactionService from '@/services/api/transactionService'
 import * as budgetService from '@/services/api/budgetService'
 import * as investmentService from '@/services/api/investmentService'
 import * as goalService from '@/services/api/goalService'
-
-      const HomePage = () => {
+const HomePage = () => {
         const [darkMode, setDarkMode] = useState(false)
         const [accounts, setAccounts] = useState([])
         const [transactions, setTransactions] = useState([])
@@ -23,7 +25,7 @@ import * as goalService from '@/services/api/goalService'
         const [goals, setGoals] = useState([])
         const [loading, setLoading] = useState(true)
         const [activeTab, setActiveTab] = useState('dashboard')
-
+        const [showAccountModal, setShowAccountModal] = useState(false)
         useEffect(() => {
           document.documentElement.classList.toggle('dark', darkMode)
         }, [darkMode])
@@ -78,6 +80,17 @@ import * as goalService from '@/services/api/goalService'
             style: 'currency',
             currency: 'USD'
           }).format(amount || 0)
+}
+
+        const handleCreateAccount = async (accountData) => {
+          try {
+            const newAccount = await accountService.create(accountData)
+            setAccounts(prev => [...prev, newAccount])
+            toast.success('Account created successfully!')
+          } catch (error) {
+            toast.error('Failed to create account')
+            throw error
+          }
         }
 
         const menuItems = [
@@ -158,8 +171,12 @@ import * as goalService from '@/services/api/goalService'
                         />
                       )}
 
-                      {activeTab === 'accounts' && (
-                        <AccountsPage accounts={accounts} formatCurrency={formatCurrency} />
+{activeTab === 'accounts' && (
+                        <AccountsPage 
+                          accounts={accounts} 
+                          formatCurrency={formatCurrency}
+                          onAddAccount={() => setShowAccountModal(true)}
+                        />
                       )}
 
                       {activeTab === 'budget' && (
@@ -179,10 +196,29 @@ import * as goalService from '@/services/api/goalService'
               </div>
             </div>
 
-            <MobileNavigation
+<MobileNavigation
               menuItems={menuItems}
               activeTab={activeTab}
               setActiveTab={setActiveTab}
+            />
+
+            <AccountCreationModal
+              isOpen={showAccountModal}
+              onClose={() => setShowAccountModal(false)}
+              onCreateAccount={handleCreateAccount}
+            />
+
+            <ToastContainer
+              position="top-right"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme={darkMode ? 'dark' : 'light'}
             />
           </div>
         )
