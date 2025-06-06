@@ -1,26 +1,28 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { toast } from 'react-toastify'
-import ApperIcon from '@/components/ApperIcon'
-import ChartToggle from '@/components/atoms/ChartToggle'
-import Button from '@/components/atoms/Button'
-import ChartContainer from '@/components/molecules/ChartContainer'
-import GoalCreationModal from '@/components/organisms/GoalCreationModal'
-import { goalService } from '@/services/index'
+import ApperIcon from '../ApperIcon'
+import Button from '../atoms/Button'
+import Card from '../atoms/Card'
+import Text from '../atoms/Text'
+import Heading from '../atoms/Heading'
+import ChartToggle from '../molecules/ChartToggle'
+import ChartContainer from '../molecules/ChartContainer'
+import GoalCreationModal from '../molecules/GoalCreationModal'
 const MainFeatureSection = ({ 
-  formatCurrency, 
-  totalBalance,
-  monthlyIncome, 
-  monthlyExpenses, 
-  totalInvestments, 
-  recentTransactions,
+  handleAddAccount, 
+  handleAddTransaction, 
+  handleSetBudget, 
+  handleGenerateReport,
   transactions = [],
   investments = [],
-  onAddAccount,
-  onAddTransaction,
-  onSetBudget,
-  onGenerateReport,
-  onGoalUpdate
+  onGoalUpdate = () => {},
+  goalService = {
+    create: async (data) => ({ id: Date.now(), ...data })
+  },
+  toast = {
+    success: (msg) => console.log('Success:', msg),
+    error: (msg) => console.error('Error:', msg)
+  }
 }) => {
   const [newGoal, setNewGoal] = useState({
     name: '',
@@ -164,10 +166,10 @@ const MainFeatureSection = ({
         }
 
 const quickActions = [
-    { name: 'Add Account', icon: 'CreditCard', color: 'text-primary', action: onAddAccount },
-    { name: 'Add Transaction', icon: 'Receipt', color: 'text-secondary', action: onAddTransaction },
-    { name: 'Set Budget', icon: 'Settings', color: 'text-accent', action: onSetBudget },
-    { name: 'Generate Report', icon: 'FileText', color: 'text-purple-500', action: onGenerateReport },
+    { name: 'Add Account', icon: 'CreditCard', color: 'text-primary', action: handleAddAccount },
+    { name: 'Add Transaction', icon: 'Receipt', color: 'text-secondary', action: handleAddTransaction },
+    { name: 'Set Budget', icon: 'Settings', color: 'text-accent', action: handleSetBudget },
+    { name: 'Generate Report', icon: 'FileText', color: 'text-purple-500', action: handleGenerateReport },
   ]
 return (
     <div className="space-y-6">
@@ -244,4 +246,4 @@ return (
   )
 }
 
-      export default MainFeatureSection
+export default MainFeatureSection
