@@ -5,9 +5,9 @@ import Button from '../atoms/Button'
 import Card from '../atoms/Card'
 import Text from '../atoms/Text'
 import Heading from '../atoms/Heading'
-import ChartToggle from '../molecules/ChartToggle'
+import ChartToggle from '../atoms/ChartToggle'
 import ChartContainer from '../molecules/ChartContainer'
-import GoalCreationModal from '../molecules/GoalCreationModal'
+import GoalCreationModal from './GoalCreationModal'
 const MainFeatureSection = ({ 
   handleAddAccount, 
   handleAddTransaction, 
