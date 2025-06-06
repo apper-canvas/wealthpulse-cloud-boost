@@ -5,9 +5,8 @@ import ApperIcon from '@/components/ApperIcon'
 import ChartToggle from '@/components/atoms/ChartToggle'
 import Button from '@/components/atoms/Button'
 import ChartContainer from '@/components/molecules/ChartContainer'
-import GoalCreationModal from '@/components/molecules/GoalCreationModal'
+import GoalCreationModal from '@/components/organisms/GoalCreationModal'
 import goalService from '@/services/goalService'
-
 const MainFeatureSection = ({ 
   formatCurrency, 
   totalBalance, 
