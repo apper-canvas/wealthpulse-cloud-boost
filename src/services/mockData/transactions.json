@@ -1,0 +1,122 @@
+[
+  {
+    "id": "1",
+    "accountId": "1",
+    "amount": 3250.00,
+    "category": "Salary",
+    "date": "2024-01-15T00:00:00Z",
+    "description": "Salary Deposit - Tech Corp"
+  },
+  {
+    "id": "2",
+    "accountId": "1",
+    "amount": -125.50,
+    "category": "Groceries",
+    "date": "2024-01-14T00:00:00Z",
+    "description": "Whole Foods Market"
+  },
+  {
+    "id": "3",
+    "accountId": "3",
+    "amount": -85.20,
+    "category": "Dining",
+    "date": "2024-01-13T00:00:00Z",
+    "description": "Restaurant ABC"
+  },
+  {
+    "id": "4",
+    "accountId": "1",
+    "amount": -1200.00,
+    "category": "Housing",
+    "date": "2024-01-01T00:00:00Z",
+    "description": "Rent Payment"
+  },
+  {
+    "id": "5",
+    "accountId": "2",
+    "amount": 500.00,
+    "category": "Transfer",
+    "date": "2024-01-15T00:00:00Z",
+    "description": "Transfer from Checking"
+  },
+  {
+    "id": "6",
+    "accountId": "1",
+    "amount": -75.80,
+    "category": "Transportation",
+    "date": "2024-01-12T00:00:00Z",
+    "description": "Gas Station"
+  },
+  {
+    "id": "7",
+    "accountId": "8",
+    "amount": -45.25,
+    "category": "Utilities",
+    "date": "2024-01-10T00:00:00Z",
+    "description": "Electric Bill"
+  },
+  {
+    "id": "8",
+    "accountId": "1",
+    "amount": -320.00,
+    "category": "Shopping",
+    "date": "2024-01-09T00:00:00Z",
+    "description": "Amazon Purchase"
+  },
+  {
+    "id": "9",
+    "accountId": "5",
+    "amount": 1000.00,
+    "category": "Investment",
+    "date": "2024-01-05T00:00:00Z",
+    "description": "Stock Purchase Transfer"
+  },
+  {
+    "id": "10",
+    "accountId": "1",
+    "amount": -95.40,
+    "category": "Healthcare",
+    "date": "2024-01-08T00:00:00Z",
+    "description": "Pharmacy - CVS"
+  },
+  {
+    "id": "11",
+    "accountId": "10",
+    "amount": 2800.00,
+    "category": "Business Income",
+    "date": "2024-01-07T00:00:00Z",
+    "description": "Client Payment - Project Alpha"
+  },
+  {
+    "id": "12",
+    "accountId": "1",
+    "amount": -55.75,
+    "category": "Entertainment",
+    "date": "2024-01-06T00:00:00Z",
+    "description": "Movie Theater"
+  },
+  {
+    "id": "13",
+    "accountId": "3",
+    "amount": -180.90,
+    "category": "Shopping",
+    "date": "2024-01-04T00:00:00Z",
+    "description": "Department Store"
+  },
+  {
+    "id": "14",
+    "accountId": "1",
+    "amount": -42.30,
+    "category": "Subscriptions",
+    "date": "2024-01-03T00:00:00Z",
+    "description": "Netflix, Spotify"
+  },
+  {
+    "id": "15",
+    "accountId": "7",
+    "amount": 25.85,
+    "category": "Interest",
+    "date": "2024-01-01T00:00:00Z",
+    "description": "Monthly Interest Payment"
+  }
+]

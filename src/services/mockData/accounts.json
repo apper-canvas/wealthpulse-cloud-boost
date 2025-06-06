@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1",
+    "name": "Wells Fargo Checking",
+    "type": "checking",
+    "balance": 4250.75,
+    "lastSync": "2024-01-15T10:30:00Z"
+  },
+  {
+    "id": "2",
+    "name": "Chase Savings",
+    "type": "savings",
+    "balance": 15600.00,
+    "lastSync": "2024-01-15T10:28:00Z"
+  },
+  {
+    "id": "3",
+    "name": "Discover Credit Card",
+    "type": "credit",
+    "balance": -1205.50,
+    "lastSync": "2024-01-15T09:45:00Z"
+  },
+  {
+    "id": "4",
+    "name": "Fidelity 401(k)",
+    "type": "retirement",
+    "balance": 45300.25,
+    "lastSync": "2024-01-14T18:00:00Z"
+  },
+  {
+    "id": "5",
+    "name": "TD Ameritrade Brokerage",
+    "type": "investment",
+    "balance": 28750.80,
+    "lastSync": "2024-01-15T10:15:00Z"
+  },
+  {
+    "id": "6",
+    "name": "Capital One 360 CD",
+    "type": "cd",
+    "balance": 10000.00,
+    "lastSync": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "7",
+    "name": "Ally High Yield Savings",
+    "type": "savings",
+    "balance": 8420.35,
+    "lastSync": "2024-01-15T10:32:00Z"
+  },
+  {
+    "id": "8",
+    "name": "Amex Gold Card",
+    "type": "credit",
+    "balance": -892.45,
+    "lastSync": "2024-01-15T10:20:00Z"
+  },
+  {
+    "id": "9",
+    "name": "Vanguard Roth IRA",
+    "type": "retirement",
+    "balance": 22150.60,
+    "lastSync": "2024-01-14T18:00:00Z"
+  },
+  {
+    "id": "10",
+    "name": "PNC Business Checking",
+    "type": "business",
+    "balance": 12750.90,
+    "lastSync": "2024-01-15T09:55:00Z"
+  }
+]

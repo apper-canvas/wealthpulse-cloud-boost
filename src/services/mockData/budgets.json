@@ -1,0 +1,62 @@
+[
+  {
+    "category": "Housing",
+    "limit": 1500.00,
+    "spent": 1200.00,
+    "period": "monthly"
+  },
+  {
+    "category": "Groceries",
+    "limit": 400.00,
+    "spent": 325.75,
+    "period": "monthly"
+  },
+  {
+    "category": "Dining",
+    "limit": 200.00,
+    "spent": 185.45,
+    "period": "monthly"
+  },
+  {
+    "category": "Transportation",
+    "limit": 300.00,
+    "spent": 125.80,
+    "period": "monthly"
+  },
+  {
+    "category": "Entertainment",
+    "limit": 150.00,
+    "spent": 95.75,
+    "period": "monthly"
+  },
+  {
+    "category": "Shopping",
+    "limit": 250.00,
+    "spent": 500.90,
+    "period": "monthly"
+  },
+  {
+    "category": "Healthcare",
+    "limit": 200.00,
+    "spent": 95.40,
+    "period": "monthly"
+  },
+  {
+    "category": "Utilities",
+    "limit": 150.00,
+    "spent": 125.25,
+    "period": "monthly"
+  },
+  {
+    "category": "Subscriptions",
+    "limit": 75.00,
+    "spent": 42.30,
+    "period": "monthly"
+  },
+  {
+    "category": "Personal Care",
+    "limit": 100.00,
+    "spent": 65.20,
+    "period": "monthly"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "name": "Emergency Fund",
+    "targetAmount": 25000,
+    "currentAmount": 15600,
+    "targetDate": "2024-12-31",
+    "type": "savings"
+  },
+  {
+    "id": "2",
+    "name": "House Down Payment",
+    "targetAmount": 80000,
+    "currentAmount": 32500,
+    "targetDate": "2025-06-30",
+    "type": "savings"
+  },
+  {
+    "id": "3",
+    "name": "Retirement Goal",
+    "targetAmount": 1000000,
+    "currentAmount": 67450,
+    "targetDate": "2045-12-31",
+    "type": "investment"
+  },
+  {
+    "id": "4",
+    "name": "Pay Off Credit Cards",
+    "targetAmount": 2098,
+    "currentAmount": 1205,
+    "targetDate": "2024-08-31",
+    "type": "debt"
+  },
+  {
+    "id": "5",
+    "name": "New Car",
+    "targetAmount": 35000,
+    "currentAmount": 8500,
+    "targetDate": "2024-10-15",
+    "type": "purchase"
+  },
+  {
+    "id": "6",
+    "name": "Vacation Fund",
+    "targetAmount": 5000,
+    "currentAmount": 1250,
+    "targetDate": "2024-07-01",
+    "type": "savings"
+  },
+  {
+    "id": "7",
+    "name": "Education Fund",
+    "targetAmount": 50000,
+    "currentAmount": 12800,
+    "targetDate": "2030-09-01",
+    "type": "savings"
+  },
+  {
+    "id": "8",
+    "name": "Investment Portfolio Growth",
+    "targetAmount": 100000,
+    "currentAmount": 28750,
+    "targetDate": "2026-12-31",
+    "type": "investment"
+  },
+  {
+    "id": "9",
+    "name": "Home Renovation",
+    "targetAmount": 15000,
+    "currentAmount": 4200,
+    "targetDate": "2024-09-30",
+    "type": "purchase"
+  },
+  {
+    "id": "10",
+    "name": "Business Investment",
+    "targetAmount": 20000,
+    "currentAmount": 7500,
+    "targetDate": "2024-11-15",
+    "type": "investment"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "symbol": "AAPL",
+    "shares": 50,
+    "purchasePrice": 150.25,
+    "currentPrice": 175.80,
+    "allocation": 25.5
+  },
+  {
+    "symbol": "MSFT",
+    "shares": 30,
+    "purchasePrice": 280.50,
+    "currentPrice": 295.20,
+    "allocation": 18.2
+  },
+  {
+    "symbol": "GOOGL",
+    "shares": 15,
+    "purchasePrice": 2650.00,
+    "currentPrice": 2720.45,
+    "allocation": 22.1
+  },
+  {
+    "symbol": "TSLA",
+    "shares": 25,
+    "purchasePrice": 220.75,
+    "currentPrice": 185.90,
+    "allocation": 12.8
+  },
+  {
+    "symbol": "NVDA",
+    "shares": 20,
+    "purchasePrice": 420.30,
+    "currentPrice": 485.60,
+    "allocation": 16.7
+  },
+  {
+    "symbol": "AMZN",
+    "shares": 8,
+    "purchasePrice": 3250.00,
+    "currentPrice": 3180.75,
+    "allocation": 14.3
+  },
+  {
+    "symbol": "META",
+    "shares": 35,
+    "purchasePrice": 185.20,
+    "currentPrice": 220.15,
+    "allocation": 10.9
+  },
+  {
+    "symbol": "NFLX",
+    "shares": 12,
+    "purchasePrice": 380.40,
+    "currentPrice": 425.80,
+    "allocation": 8.2
+  },
+  {
+    "symbol": "AMD",
+    "shares": 40,
+    "purchasePrice": 95.75,
+    "currentPrice": 110.30,
+    "allocation": 7.6
+  },
+  {
+    "symbol": "SPY",
+    "shares": 60,
+    "purchasePrice": 420.00,
+    "currentPrice": 445.20,
+    "allocation": 24.1
+  }
+]
