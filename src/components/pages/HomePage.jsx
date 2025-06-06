@@ -53,14 +53,12 @@ const [activeTab, setActiveTab] = useState('dashboard')
             } finally {
               setLoading(false)
             }
-          }
+}
           loadData()
         }, [])
 
         const calculateNetWorth = () => {
-          const accountsTotal = accounts.reduce((sum, account) => sum + (account.balance || 0), 0)
-          const investmentValue = investments.reduce((sum, inv) => sum + ((inv.shares || 0) * (inv.currentPrice || 0)), 0)
-          return accountsTotal + investmentValue
+          return accounts.reduce((sum, account) => sum + (account.balance || 0), 0)
         }
 
         const calculateMonthlyIncome = () => {
@@ -82,7 +80,7 @@ const [activeTab, setActiveTab] = useState('dashboard')
             style: 'currency',
             currency: 'USD'
           }).format(amount || 0)
-}
+        }
 
         const handleCreateAccount = async (accountData) => {
           try {
@@ -171,10 +169,11 @@ const [activeTab, setActiveTab] = useState('dashboard')
                           accounts={accounts}
                           transactions={transactions}
                           budgets={budgets}
-                          investments={investments}
+investments={investments}
                           goals={goals}
                           onAccountUpdate={setAccounts}
-onBudgetUpdate={setBudgets}
+                          onTransactionUpdate={setTransactions}
+                          onBudgetUpdate={setBudgets}
                           onInvestmentUpdate={setInvestments}
                           onGoalUpdate={setGoals}
                           calculateMonthlyIncome={calculateMonthlyIncome}
@@ -213,9 +212,9 @@ onBudgetUpdate={setBudgets}
               menuItems={menuItems}
               activeTab={activeTab}
               setActiveTab={setActiveTab}
-            />
+/>
 
-<AccountCreationModal
+            <AccountCreationModal
               isOpen={showAccountModal}
               onClose={() => setShowAccountModal(false)}
               onCreateAccount={handleCreateAccount}
