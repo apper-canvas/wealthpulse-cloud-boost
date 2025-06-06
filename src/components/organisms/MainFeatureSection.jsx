@@ -6,10 +6,10 @@ import ChartToggle from '@/components/atoms/ChartToggle'
 import Button from '@/components/atoms/Button'
 import ChartContainer from '@/components/molecules/ChartContainer'
 import GoalCreationModal from '@/components/organisms/GoalCreationModal'
-import goalService from '@/services/goalService'
+import { goalService } from '@/services/index'
 const MainFeatureSection = ({ 
   formatCurrency, 
-  totalBalance, 
+  totalBalance,
   monthlyIncome, 
   monthlyExpenses, 
   totalInvestments, 
